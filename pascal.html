@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pascal Triangle</title>
+  <style>
+    *{ 
+      padding:0;
+      margin:0
+    }
+    html{ 
+      user-select:none
+    }
+    body{ 
+      height:auto;
+      display:flex;
+      align-items: center;
+      flex-direction: column;
+      width:100vw;
+      gap:20px;
+    }
+    #triangle-template{ 
+      position:relative;
+      height:500px;
+      max-width:700px;
+      text-align: center;
+    }
+    .row{
+      width:100%;
+      display:flex;
+      justify-content: center;
+      gap:10px;
+    }
+    .row span{
+      width:30px;
+      aspect-ratio: 1 / 1;
+      display:grid;
+      place-content:center;
+      cursor:pointer;
+      transition:.2s
+    }
+
+    .row span:hover{
+      transform:scale(2)
+    }
+
+    #tooltip{ 
+      display:flex;
+      align-items: center;
+      font-size:2rem
+    }
+
+    #tooltip > div {
+      display:flex;
+      flex-direction:column;
+      font-size:1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pascal Triangle.</h1>
+
+    <form id="count">
+      <label for="n">Write n: </label>
+      <input type="number" min="0" max="15" value="0" id="n" name="n">
+      <input type="submit" value="zadat">
+    </form>
+
+  <section id="triangle-template">
+
+  </section>
+
+  <section id="tooltip">
+    <span>( </span>
+    <div>
+      <span>0</span>
+      <span>0</span>
+    </div>
+  <span> )</span>
+  </section>
+
+  <script src="pascal.js"></script>
+  
+</body>
+</html>
